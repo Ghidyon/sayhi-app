@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300; 500;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --darkblue: #222868;
+}
+
+body {
+    background: #ecf0f3;
+    font-family: Raleway;
+}
+
+.nav-wrapper img {
+    width: 140px;
+    margin-top: .5rem;
+}
+
+.blue-smiley {
+    width: 100%;
+    /* z-index: 50; */
+    border-radius: 50%;
+}
+
+.mark {
+    width: 15px;
+    margin-bottom: 7px;
+}
+
+span {
+    font-size: 20px;
+}
+
+h1 {
+    margin: 0.5em 0 0.25em 0 !important;
+}
+
+.col {
+    padding: 0 !important;
+}
+
+.row p {
+    font-size: 18px;
+}
+
+.google-play, .apple-store, .mac-store, .windows {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.windows, .google-play {
+    margin-right: 7px;
+}
+
+
+
+
+
+
+
+/* Utilities */
+.white:hover {
+    background: #7BD1EC !important;
+}
+
+.lightBlue {
+    background: #BDE8F5 !important;
+}
+
+.lightBlue:hover {
+    background: #7BD1EC !important;
+}
+
+.lightBlue-text {
+    color: #BDE8F5;
+}
+
+.darkBlue {
+    background: #222868;
+}
+
+.darkBlue-text {
+    color: #222868 !important;
+}
+
+.rounded {
+    border-radius: 25px;
+}
+
+.bold {
+    font-family: Roboto !important;
+    font-weight: 500 !important;
+    /* font-size: 24px; */
+}
+
+.thin {
+    font-family: "Roboto" !important;
+    font-weight: 300 !important;
+    font-size: 50px;
+}
+
+.top-padding {
+    padding-top: 6rem;
+}
+
+.lr-padding {
+    padding: 0 1.5rem;
+}
+
+.top-margin {
+    margin: 9rem 0 .3rem 0 !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .nav-wrapper img {
+        width: 100px;
+        margin-top: .6rem;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .blue-smiley {
+        width: 400px;
+        /* z-index: 50; */
+        border-radius: 50%;
+    }
+}
+/* 
+.btn-sidenav {
+    color: var(--darkblue) !important;
+    font-family: Roboto !important;
+    font-weight: 700 !important;
+    padding: 0 1.5rem;
+    border-radius: 25px;
+    background: white !important;
+} */
+/* 
+@media only screen and (min-width: 993px) {
+
+} */

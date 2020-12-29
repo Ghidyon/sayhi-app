@@ -42,6 +42,9 @@ h1 {
 
 .row p {
     font-size: 18px;
+    /* width: 360px !important; */
+    /* margin: 0 auto!important; */
+    /* outline: 1px solid violet; */
 }
 
 .google-play, .apple-store, .mac-store, .windows {
@@ -51,9 +54,12 @@ h1 {
 }
 
 .windows, .google-play {
-    margin-right: 7px;
+    margin-right: 3.5px;
 }
 
+.apple-store, .mac-store {
+    margin-left: 3.5px;
+}
 
 
 
@@ -110,7 +116,11 @@ h1 {
 }
 
 .top-margin {
-    margin: 9rem 0 .3rem 0 !important;
+    margin: 9rem 0 0 0 !important;
+}
+
+.bottom-margin {
+    margin-bottom: .3rem !important;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -119,11 +129,22 @@ h1 {
     }
 }
 
-
 @media only screen and (max-width: 600px) {
     .nav-wrapper img {
         width: 100px;
         margin-top: .6rem;
+    }
+
+    .thin {
+        font-size: 40px;
+    }
+
+    .row p, .row p span {
+        font-size: 16px;
+    }
+
+    .mark {
+        margin-bottom: 3px;
     }
 }
 
@@ -132,6 +153,17 @@ h1 {
         width: 400px;
         /* z-index: 50; */
         border-radius: 50%;
+    }
+}
+
+@media only screen and (max-width: 345px) {
+    .bottom-margin {
+        margin-bottom: .5rem;
+    }
+    
+    .windows, .google-play, .apple-store, .mac-store {
+        margin-right: .3rem;
+        margin-left: .3rem;
     }
 }
 /* 

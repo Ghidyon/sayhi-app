@@ -156,14 +156,14 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
     .bottom-margin {
         margin-bottom: .5rem;
     }
     
     .windows, .google-play, .apple-store, .mac-store {
-        margin-right: 1rem;
-        margin-left: 1rem;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
     }
 }
 /* 

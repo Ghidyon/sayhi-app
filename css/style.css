@@ -22,6 +22,9 @@ body {
     border-radius: 50%;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3),
                 -8px -8px 16px rgb(255, 255, 255);
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    margin-top: 1rem;
 }
 
 .mark {
@@ -65,11 +68,12 @@ h1 {
 footer {
     position: relative;
     margin-top: 16rem;
+    padding-bottom: 3rem;
 }
 
 .wave {
     position: absolute;
-    bottom: 350px;
+    bottom: 400px;
     left: 0;
     z-index: -1;
 }
@@ -83,6 +87,44 @@ footer {
     top: 35%;
     left: 20%;
     transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px);
+	}
+	60% {
+		-webkit-transform: translateY(-12px);
+		        transform: translateY(-12px);
+	}
+}
+
+@keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px);
+	}
+	60% {
+		-webkit-transform: translateY(-12px);
+		        transform: translateY(-12px);
+	}
 }
 
 /* Utilities */
@@ -214,7 +256,7 @@ footer {
     }
 
     .wave {
-        bottom: 320px;
+        bottom: 370px;
     }
 }
 
@@ -233,7 +275,7 @@ footer {
     }
 
     .wave {
-        bottom: 360px;
+        bottom: 400px;
     }
 }
 

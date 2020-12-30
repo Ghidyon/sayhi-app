@@ -12,7 +12,7 @@ body {
     font-family: Raleway;
 }
 
-.nav-wrapper img {
+.logo {
     width: 140px;
     margin-top: .5rem;
 }
@@ -61,11 +61,28 @@ h1 {
     margin-left: 3.5px;
 }
 
+footer {
+    position: relative;
+    margin-top: 16rem;
+}
 
+.wave {
+    position: absolute;
+    bottom: 350px;
+    left: 0;
+    z-index: -1;
+}
 
+.footer-btn {
+    position: relative;
+}
 
-
-
+.footer-icon {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
 /* Utilities */
 .white:hover {
     background: #7BD1EC !important;
@@ -108,7 +125,7 @@ h1 {
 }
 
 .top-padding {
-    padding-top: 6rem;
+    padding: 6rem 0;
 }
 
 .lr-padding {
@@ -123,6 +140,23 @@ h1 {
     margin-bottom: .3rem !important;
 }
 
+.footer-margin {
+    margin-top: 2rem;
+}
+
+.right-margin {
+    margin-right: 3rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.margin-down {
+    margin-bottom: 1rem;
+}
+
 @media only screen and (max-width: 1200px) {
     .place-center {
         text-align: center;
@@ -130,7 +164,7 @@ h1 {
 }
 
 @media only screen and (max-width: 600px) {
-    .nav-wrapper img {
+    .logo {
         width: 100px;
         margin-top: .6rem;
     }
@@ -154,6 +188,14 @@ h1 {
         /* z-index: 50; */
         border-radius: 50%;
     }
+
+    footer {
+        margin-top: 18rem;
+    }
+
+    .wave {
+        bottom: 320px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -166,16 +208,7 @@ h1 {
         margin-left: 1rem;
     }
 }
-/* 
-.btn-sidenav {
-    color: var(--darkblue) !important;
-    font-family: Roboto !important;
-    font-weight: 700 !important;
-    padding: 0 1.5rem;
-    border-radius: 25px;
-    background: white !important;
-} */
-/* 
-@media only screen and (min-width: 993px) {
+
+/*@media only screen and (min-width: 993px) {
 
 } */

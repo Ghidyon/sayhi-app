@@ -5,7 +5,7 @@
 
 :root {
     --darkblue: #222868;
-    --lightblue: #7AD0EB;
+    --lightblue: #7BD1EC;
 }
 
 body {
@@ -31,6 +31,11 @@ body {
 .mark {
     width: 15px;
     margin-bottom: 7px;
+}
+
+.form-logo {
+    width: 70px;
+    filter: drop-shadow(2px 4px 2px #585858);
 }
 
 span {
@@ -238,6 +243,13 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
   color: var(--darkblue);
 }
 
+.form-container {
+    display: flex;
+    min-height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* Utilities */
 .white:hover {
     background: #7BD1EC !important;
@@ -290,6 +302,10 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
     margin: 9rem 0 0 0 !important;
 }
 
+.margin-up {
+    margin-top: 3rem;
+}
+
 .bottom-margin {
     margin-bottom: 16px !important;
 }
@@ -309,6 +325,10 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 
 .margin-down {
     margin-bottom: 1rem;
+}
+
+.margin-down1 {
+    margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 1200px) {

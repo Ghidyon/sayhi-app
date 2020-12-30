@@ -19,8 +19,9 @@ body {
 
 .blue-smiley {
     width: 100%;
-    /* z-index: 50; */
     border-radius: 50%;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3),
+                -8px -8px 16px rgb(255, 255, 255);
 }
 
 .mark {
@@ -42,9 +43,6 @@ h1 {
 
 .row p {
     font-size: 18px;
-    /* width: 360px !important; */
-    /* margin: 0 auto!important; */
-    /* outline: 1px solid violet; */
 }
 
 .google-play, .apple-store, .mac-store, .windows {
@@ -119,7 +117,6 @@ footer {
 .bold {
     font-family: Roboto !important;
     font-weight: 500 !important;
-    /* font-size: 24px; */
 }
 
 .thin {
@@ -209,7 +206,6 @@ footer {
 @media only screen and (min-width: 1400px) {
     .blue-smiley {
         width: 400px;
-        /* z-index: 50; */
         border-radius: 50%;
     }
 

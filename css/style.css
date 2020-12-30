@@ -331,6 +331,10 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
     margin-bottom: 2rem;
 }
 
+.margin-down2 {
+    margin-bottom: 3rem;
+}
+
 @media only screen and (max-width: 1200px) {
     .place-center {
         text-align: center;

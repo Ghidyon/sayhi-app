@@ -83,6 +83,7 @@ footer {
     left: 20%;
     transform: translate(-50%, -50%);
 }
+
 /* Utilities */
 .white:hover {
     background: #7BD1EC !important;
@@ -97,7 +98,7 @@ footer {
 }
 
 .lightBlue-text {
-    color: #BDE8F5;
+    color: #BDE8F5 !important;
 }
 
 .darkBlue {
@@ -161,6 +162,14 @@ footer {
     .place-center {
         text-align: center;
     }
+
+    .top-margin {
+        margin: 14rem 0 0 0 !important;
+    }
+
+    footer {
+        margin-top: 10rem;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -179,6 +188,18 @@ footer {
 
     .mark {
         margin-bottom: 3px;
+    }
+
+    .right-margin {
+        margin-right: 1.5rem;
+    }
+
+    .stay-centered {
+        text-align: center;
+    }
+
+    footer {
+        margin-top: 5rem;
     }
 }
 
@@ -200,12 +221,20 @@ footer {
 
 @media only screen and (max-width: 400px) {
     .bottom-margin {
-        margin-bottom: .5rem;
+        margin-bottom: .7rem;
     }
     
     .windows, .google-play, .apple-store, .mac-store {
         margin-right: 1rem;
         margin-left: 1rem;
+    }
+
+    footer {
+        margin-top: 4rem;
+    }
+
+    .wave {
+        bottom: 360px;
     }
 }
 

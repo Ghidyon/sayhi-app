@@ -33,7 +33,7 @@ body {
 
 .form-logo {
     width: 70px;
-    filter: drop-shadow(2px 4px 2px #585858);
+    filter: drop-shadow(2px 2px 2px #585858);
 }
 
 span {

@@ -346,8 +346,8 @@ h6 {
 
 .input {
     width: 100%;
-    border-radius: 20px;
-    height: 40px;
+    border-radius: 30px;
+    height: 60px;
     outline: none;
     padding: 0 1rem 0 3.5rem;
     border: 0;
@@ -473,10 +473,11 @@ h6 {
 }
 
 .size-4 {
-    font-size: 25px;
+    font-size: 30px;
     position: absolute;
-    top: 30%;
-    left: 10px;
+    top: 55%;
+    left: 15px;
+    transform: translate(0, -55%);
 }
 
 @media only screen and (max-width: 1200px) {

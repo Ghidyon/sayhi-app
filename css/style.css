@@ -319,6 +319,31 @@ h6 {
     background-position: center;
     background-size: center;
 }
+
+.fixed-input {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    /* outline: 1px solid red; */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input {
+    width: 95%;
+    border-radius: 20px;
+    height: 50px;
+    outline: none;
+    padding: 0 1rem 0 3rem;
+    border: 0;
+}
+
+
 /* Utilities */
 .white:hover {
     background: #7BD1EC !important;
@@ -433,6 +458,13 @@ h6 {
     padding-bottom: .5rem;
 }
 
+.size-4 {
+    font-size: 30px;
+    position: absolute;
+    top: 25%;
+    /* transform: translate(-50%); */
+}
+
 @media only screen and (max-width: 1200px) {
     .place-center {
         text-align: center;
@@ -524,7 +556,7 @@ h6 {
                     -4px -4px 8px #b1b1b1;
     }
 
-    .fixed-header {
+    .fixed-header, .fixed-input {
         width: 70%;
     }
 }

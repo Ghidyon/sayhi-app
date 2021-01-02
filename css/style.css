@@ -278,13 +278,13 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 }
 
 .sender-box-right {
-    clip-path: polygon(100% 0, 96% 8%, 96% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 98% 10px, 98% 100%, 0 100%, 0 0);
     padding: 1rem 3.8rem 1rem 2rem !important;
     border-radius: 20px 0 0 20px;
 }
 
 .sender-box-left {
-    clip-path: polygon(0 0, 100% 0, 100% 99%, 4% 100%, 4% 9%);
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 2% 100%, 2% 10px);
     padding: 1rem 2rem 1rem 3.5rem !important;
     border-radius: 0 20px 20px 0;
 }

@@ -250,8 +250,24 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 }
 
 /* Chat Interface */
+
 .border {
     outline: 1px solid black;
+}
+
+.fixed-header{
+    position: fixed;
+    width: 90%;
+    height: 64px;
+    z-index: 997;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
 }
 
 .size-1 {
@@ -260,24 +276,23 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 
 .sender-box-right {
     clip-path: polygon(100% 0, 96% 8%, 96% 100%, 0 100%, 0 0);
-    border-radius: 20px;
     padding: 1rem 3.8rem 1rem 2rem !important;
+    border-radius: 20px 0 0 20px;
 }
 
 .sender-box-left {
     clip-path: polygon(0 0, 100% 0, 100% 99%, 4% 100%, 4% 9%);
     padding: 1rem 2rem 1rem 3.5rem !important;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
 }
 
 .chat-time {
-    font-size: 18px;
-
+    font-size: 14px;
 }
 
 .chat-sent {
     color: #0089D1;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 h5 {
@@ -454,5 +469,17 @@ h5 {
 
     .wave {
         bottom: 400px;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .fixed-header {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .fixed-header {
+        width: 70%;
     }
 }

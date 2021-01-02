@@ -250,12 +250,6 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 }
 
 /* Chat Interface */
-
-.border {
-    /* border: 1px solid black; */
-
-}
-
 .fixed-header{
     position: fixed;
     width: 100%;
@@ -272,6 +266,7 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 }
 
 .status {
+    background: #E0EFFA;
     padding: .1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -304,12 +299,23 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 h5 {
     font-family: Roboto;
     font-weight: 400;
+    font-size: 20px;
 }
 
 h6 {
     font-size: 14px;
 }
 
+.messages {
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background-image: url("../images/chat-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: center;
+}
 /* Utilities */
 .white:hover {
     background: #7BD1EC !important;
@@ -485,9 +491,6 @@ h6 {
         bottom: 400px;
     }
 }
-
-@media only screen and (min-width: 601px) {
-
 
 @media only screen and (min-width: 993px) {
     .border {

@@ -249,6 +249,15 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
     align-items: center;
 }
 
+/* Chat Interface */
+.border {
+    outline: 1px solid black;
+}
+
+.size-1 {
+    font-size: 30px;
+}
+
 /* Utilities */
 .white:hover {
     background: #7BD1EC !important;

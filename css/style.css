@@ -258,14 +258,26 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
     font-size: 30px;
 }
 
-.sender-box {
-    clip-path: polygon(100% 0, 93% 8%, 93% 100%, 0 100%, 0 0);
+.sender-box-right {
+    clip-path: polygon(100% 0, 93% 9%, 93% 100%, 0 100%, 0 0);
     border-radius: 20px;
     padding: 1rem 4rem 1rem 2rem !important;
 }
 
+.sender-box-left {
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 4% 100%, 4% 9%);
+    padding: 1rem 1.5rem 1rem 3.5rem !important;
+    border-radius: 20px;
+}
+
 .chat-time {
+    font-size: 18px;
+
+}
+
+.chat-sent {
     color: #0089D1;
+    font-size: 18px;
 }
 
 h5 {
@@ -358,8 +370,12 @@ h5 {
     margin-bottom: 3rem;
 }
 
-.chat-margin {
-    margin: 3rem 0;
+.left-padding {
+    padding-left: 2rem !important;
+}
+
+.tiny-margin {
+    margin-top: .5rem;
 }
 
 @media only screen and (max-width: 1200px) {

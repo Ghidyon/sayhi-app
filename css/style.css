@@ -258,6 +258,21 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
     font-size: 30px;
 }
 
+.sender-box {
+    clip-path: polygon(100% 0, 93% 8%, 93% 100%, 0 100%, 0 0);
+    border-radius: 20px;
+    padding: 1rem 4rem 1rem 2rem !important;
+}
+
+.chat-time {
+    color: #0089D1;
+}
+
+h5 {
+    font-family: Roboto;
+    font-weight: 400;
+}
+
 /* Utilities */
 .white:hover {
     background: #7BD1EC !important;
@@ -341,6 +356,10 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 
 .margin-down2 {
     margin-bottom: 3rem;
+}
+
+.chat-margin {
+    margin: 3rem 0;
 }
 
 @media only screen and (max-width: 1200px) {

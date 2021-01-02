@@ -261,18 +261,19 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: .8rem 2rem .5rem 2rem;
     width: 100%;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
 }
 
 .status {
     background: #E0EFFA;
     padding: .1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.size-1 {
-    font-size: 30px;
 }
 
 .sender-box-right {
@@ -413,6 +414,26 @@ h6 {
     margin-top: .5rem;
 }
 
+.size-1 {
+    font-size: 25px;
+    padding-bottom: .5rem;
+    /* outline: 1px solid aqua; */
+}
+
+.size-2 {
+    font-size: 50px;
+    /* outline: 1px solid aqua; */
+    /* margin-top: 1rem; */
+}
+
+.size-3 {
+    font-size: 40px;
+    /* outline: 1px solid white; */
+    margin-right: .5rem;
+    margin-left: 2rem;
+    padding-bottom: .5rem;
+}
+
 @media only screen and (max-width: 1200px) {
     .place-center {
         text-align: center;
@@ -456,6 +477,10 @@ h6 {
     footer {
         margin-top: 5rem;
     }
+
+    .fixed-header{
+        height: 56px;
+    }    
 }
 
 @media only screen and (min-width: 1400px) {

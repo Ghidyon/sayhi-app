@@ -252,12 +252,13 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 /* Chat Interface */
 
 .border {
-    outline: 1px solid black;
+    /* border: 1px solid black; */
+
 }
 
 .fixed-header{
     position: fixed;
-    width: 90%;
+    width: 100%;
     height: 64px;
     z-index: 997;
 }
@@ -268,6 +269,11 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
     align-items: center;
     padding: 1rem 2rem;
     width: 100%;
+}
+
+.status {
+    padding: .1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .size-1 {
@@ -298,6 +304,10 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 h5 {
     font-family: Roboto;
     font-weight: 400;
+}
+
+h6 {
+    font-size: 14px;
 }
 
 /* Utilities */
@@ -350,6 +360,10 @@ h5 {
 
 .top-margin {
     margin: 9rem 0 0 0 !important;
+}
+
+.top-margin1 {
+    margin-top: 10rem !important;
 }
 
 .margin-up {
@@ -473,12 +487,16 @@ h5 {
 }
 
 @media only screen and (min-width: 601px) {
-    .fixed-header {
-        width: 85%;
-    }
-}
+
 
 @media only screen and (min-width: 993px) {
+    .border {
+        width: 70%;
+        margin: 0 auto;
+        box-shadow: 4px 4px 8px #b1b1b1,
+                    -4px -4px 8px #b1b1b1;
+    }
+
     .fixed-header {
         width: 70%;
     }

@@ -263,6 +263,7 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
     align-items: center;
     padding: .8rem 2rem .5rem 2rem;
     width: 100%;
+    /* outline: 2px solid red; */
 }
 
 .chat-header {
@@ -272,8 +273,8 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 
 .status {
     background: #E0EFFA;
-    padding: .1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: .1px 0 !important;
 }
 
 .sender-box-right {
@@ -305,6 +306,7 @@ h5 {
 
 h6 {
     font-size: 14px;
+    padding: 0!important;
 }
 
 .messages {
@@ -422,14 +424,11 @@ h6 {
 
 .size-2 {
     font-size: 50px;
-    /* outline: 1px solid aqua; */
-    /* margin-top: 1rem; */
 }
 
 .size-3 {
     font-size: 40px;
-    /* outline: 1px solid white; */
-    margin-right: .5rem;
+    margin-right: .75rem;
     margin-left: 2rem;
     padding-bottom: .5rem;
 }

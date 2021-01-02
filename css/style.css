@@ -273,7 +273,6 @@ textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.
 .status {
     background: #E0EFFA;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    /* padding: 0 !important; */
 }
 
 .status span {
@@ -336,17 +335,18 @@ h5 {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: .5rem .05rem 0.1rem .05rem;
+    padding: .5rem .05rem 1px .05rem;
 }
 
 .input {
     width: 100%;
     border-radius: 30px;
-    height: 60px;
+    height: 55px;
     outline: none;
-    padding: 0 1rem 0 3.5rem;
+    padding: 0 1rem 0 4rem;
     border: 0;
     font-family: Raleway;
+    font-size: 16px;
 }
 
 .input-group a {
@@ -469,9 +469,9 @@ h5 {
 .size-4 {
     font-size: 30px;
     position: absolute;
-    top: 55%;
+    top: 60%;
     left: 15px;
-    transform: translate(0, -55%);
+    transform: translate(0, -60%);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -603,12 +603,10 @@ h5 {
     }
 
     .sender-box-right {
-    padding: .5rem 2rem .5rem 1rem !important;
-    /* padding: 1rem 3.8rem 1rem 2rem !important; */
+        padding: .5rem 2rem .5rem 1rem !important;
     }
     
     .sender-box-left {
-        /* padding: 1rem 2rem 1rem 3.5rem !important; */
         padding: .5rem 1rem .5rem 1.9rem !important;
     }
     

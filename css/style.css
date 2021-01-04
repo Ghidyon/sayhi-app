@@ -353,6 +353,10 @@ h5 {
     margin-left: .5rem;
 }
 
+.collection .collection-item.avatar {
+    min-height: 64px !important;
+}
+
 /* Utilities */
 .white:hover {
     background: #7BD1EC !important;
@@ -478,6 +482,10 @@ h5 {
     font-size: 180px;
 }
 
+.body-color {
+    background: #ecf0f3 !important;
+}
+
 @media only screen and (max-width: 1200px) {
     .place-center {
         text-align: center;
@@ -554,10 +562,6 @@ h5 {
         margin-left: .5rem;
         padding-bottom: .5rem;
     }    
-
-    .body-color {
-        background: #ecf0f3 !important;
-    }
 }
 
 @media only screen and (min-width: 1400px) {

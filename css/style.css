@@ -474,6 +474,10 @@ h5 {
     transform: translate(0, -60%);
 }
 
+.size-5 {
+    font-size: 180px;
+}
+
 @media only screen and (max-width: 1200px) {
     .place-center {
         text-align: center;
@@ -550,6 +554,10 @@ h5 {
         margin-left: .5rem;
         padding-bottom: .5rem;
     }    
+
+    .body-color {
+        background: #ecf0f3 !important;
+    }
 }
 
 @media only screen and (min-width: 1400px) {

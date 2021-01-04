@@ -479,7 +479,7 @@ h5 {
 }
 
 .size-5 {
-    font-size: 180px;
+    font-size: 280px;
 }
 
 .body-color {
@@ -553,7 +553,6 @@ h5 {
     
     .size-2 {
         font-size: 40px;
-        /* margin-left: -4px; */
     }
     
     .size-3 {
@@ -562,6 +561,10 @@ h5 {
         margin-left: .5rem;
         padding-bottom: .5rem;
     }    
+    
+    .size-5 {
+        font-size: 180px;
+    }
 }
 
 @media only screen and (min-width: 1400px) {

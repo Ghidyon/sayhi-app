@@ -17,6 +17,13 @@ if (isset($_POST['register'])) {
         redirect('signup');
     }
 
+    $password_match_error = password_match($user_data['password'], $user_data['confirm_password']);
+    
+    if(!empty($password_match_error)) {
+        $_SESSION['message'] = $password_match_error;
+        redirect('signup');
+    }
+    
     $password_strength_error = password_strength($user_data['password']);
 
     if(!empty($password_strength_error)) {
@@ -24,13 +31,6 @@ if (isset($_POST['register'])) {
         redirect('signup');
     }
     
-    $password_match_error = password_match($user_data['password'], $user_data['confirm_password']);
-
-    if(!empty($password_match_error)) {
-        $_SESSION['message'] = $password_match_error;
-        redirect('signup');
-    }
-
 } else {
     // take the user back to the home page
     // header('location:'.ROOT.'signup');  used to keep people off some files

@@ -84,7 +84,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                         M.toast({
                             html: " . "'" . $_SESSION['message'] . "'" . ",
                             classes: 'rounded red',
-                            displayLength: 5000
+                            displayLength: 10000
                         });
                     </script>";
         echo $toast;

@@ -38,7 +38,7 @@ function password_match($password_field, $confirm_password_field) {
 }
 
 function password_strength($password) {
-    if (strlen($password) < 8) {
+    if (strlen($password) > 1 && strlen($password) < 8) {
         $error = 'Password must be 8 characters long!';
         return $error;
     }

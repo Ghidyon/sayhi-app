@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    // require_once('app.php');
+    require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" sizes="32x32" href="<?= ROOT ?>images/favicon.jpg">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="<?= ROOT ?>css/materialize.min.css">
-    <link rel="stylesheet" href="<?= ROOT ?>css/style.css">
-    <title>SayHi - Create Account</title>
-</head>
-
+?>
 <body>
 
 
@@ -23,10 +15,10 @@
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="home.php"
+                    <li><a href="home"
                             class="waves-effect waves-light btn lightBlue darkBlue-text rounded bold lr-padding">Home</a>
                     </li>
-                    <li><a href="login.php"
+                    <li><a href="login"
                             class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Login</a>
                     </li>
                 </ul>
@@ -35,10 +27,10 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="home.php"
+        <li><a href="home"
                 class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Home</a>
         </li>
-        <li><a href="login.php"
+        <li><a href="login"
                 class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Login</a></li>
     </ul>
 
@@ -46,10 +38,10 @@
     <div class="form-container">
         <div class="container">
             <div class="row">
-                <form class="col offset-s1 s10 m12">
+                <form class="col offset-s1 s10 m12" action="<?= ROOT ?>actions/register" method="POST">
                     <div class="row">
                         <div class="col s12 center-align margin-up">
-                            <img src="<?ROOT?>images/smileymark.png" class="form-logo" alt="">
+                            <img src="<?= ROOT ?>images/smileymark.png" class="form-logo" alt="">
                         </div>
 
                         <div class="col s12 center-align margin-down1">
@@ -58,33 +50,39 @@
 
                         <div class="input-field col s12 offset-m2 m8 xl5">
                             <i class="material-icons prefix darkBlue-text">account_circle</i>
-                            <input id="full_name" type="text" class="validate">
+                            <input id="full_name" type="text" name="name" class="validate">
                             <label for="full_name">Full Name</label>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 xl6 offset-xl1">
                             <i class="material-icons prefix darkBlue-text">email</i>
-                            <input id="email" type="email" class="validate">
+                            <input id="email" type="email" name="email" class="validate">
                             <label for="email">Email</label>
                             <span class="helper-text" data-error="wrong" data-success="right">example@gmail.com</span>
                         </div>
                         
                         <div class="input-field col s12 offset-m2 m8 xl5">
                             <i class="material-icons prefix darkBlue-text">phone</i>
-                            <input id="tel" type="tel" class="validate">
+                            <input id="tel" type="tel" name="phone" class="validate">
                             <label for="tel">Phone</label>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 xl6 offset-xl1">
                             <i class="material-icons prefix darkBlue-text">lock</i>
-                            <input id="password" type="password" class="validate">
+                            <input id="password" type="password" name="password" class="validate">
                             <label for="password">Password</label>
                         </div>
 
+                        <div class="input-field col s12 offset-m2 m8 xl6 offset-xl3">
+                            <i class="material-icons prefix darkBlue-text">lock</i>
+                            <input id="c_password" type="password" name="c_password" class="validate">
+                            <label for="c_password">Confirm Password</label>
+                        </div>
+
                         <div class="col s12 center-align margin-up">
-                            <a href="login.php"
+                            <button type="submit" name="register"
                                 class="waves-effect btn-large transparent darkBlue-text bold rounded">Create
-                                Account</a>
+                                Account</button>
                         </div>
 
                     </div>

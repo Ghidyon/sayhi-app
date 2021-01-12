@@ -16,4 +16,6 @@
     define('SITE_NAME', 'SayHi');
     define('ROOT', '/hiapp/'); // change to '/' when online
     
+    // getting scripts for actions
+    require_once(APP_ROOT . DS . 'actions' . DS . 'functions.php');
 ?>

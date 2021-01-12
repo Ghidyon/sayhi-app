@@ -1,6 +1,6 @@
 <?php
 
-function dumpAndDie($element) {
+function dump_and_die($element) {
     echo "<pre>";
     var_dump($element);
     echo "</pre>";

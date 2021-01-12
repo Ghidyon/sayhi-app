@@ -10,6 +10,14 @@
         require_once(APP_ROOT . DS . 'includes' . DS . 'nav.php');
     ?>
 
+<!-- To display error -->
+    <?php 
+    if(isset($_SESSION['msg'])) {
+        echo $_SESSION['msg'];
+        $_SESSION['msg'] = '';
+    }
+    ?>
+
     <!-- Content Section -->
 
     <div class="container top-padding">
@@ -52,6 +60,10 @@
         require_once(APP_ROOT . DS . 'includes' . DS . 'footer.php');
     ?>
 
+    <!-- Scripts -->
+    <?php 
+        require_once(APP_ROOT . DS . 'includes' . DS . 'scripts.php');
+    ?>
 </body>
 
 </html>

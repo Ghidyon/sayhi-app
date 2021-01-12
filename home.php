@@ -20,11 +20,11 @@
                 <img class="brand-logo logo" src="images/sayhi-logo.png" alt="Logo">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="signup.html"
+                    <li><a href="signup.php"
                             class="waves-effect waves-light btn lightBlue darkBlue-text rounded bold lr-padding">Sign
                             Up</a>
                     </li>
-                    <li><a href="login.html"
+                    <li><a href="login.php"
                             class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Login</a>
                     </li>
                 </ul>
@@ -33,10 +33,10 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="signup.html" class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Sign
+        <li><a href="signup.php" class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Sign
                 Up</a>
         </li>
-        <li><a href="login.html"
+        <li><a href="login.php"
                 class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Login</a></li>
     </ul>
 
@@ -72,7 +72,7 @@
             </div>
 
             <div class="col hide-on-med-and-down hide-on-large-only show-on-extra-large xl5">
-                <img class="blue-smiley" src="images/blue-smiley.png" alt="Blue Smiley" />
+                <img class="blue-smiley" src="images/blue-smiley.png" alt="Blue Smiley"/>
             </div>
         </div>
     </div>
@@ -112,7 +112,7 @@
             </div>
             <div class="footer-copyright darkBlue">
                 <div class="col s2">
-                    <h6 class="lightBlue-text footer-margin">© 2021 Ghidyon</h6>
+                    <h6 class="lightBlue-text footer-margin">© 2020 - <?= date('Y'); ?> Ghidyon</h6>
                 </div>
                 <div class="col footer-margin">
                     <a href="#!"

@@ -18,16 +18,16 @@
     <nav class="darkBlue">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo">
+                <a href="home.php" class="brand-logo">
                     <img class="logo" src="images/sayhi-logo.png" alt="Logo">
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html"
+                    <li><a href="home.php"
                             class="waves-effect waves-light btn lightBlue darkBlue-text rounded bold lr-padding">Home</a>
                     </li>
-                    <li><a href="login.html"
-                            class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Login</a>
+                    <li><a href="signup.php"
+                            class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -35,11 +35,11 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="index.html"
+        <li><a href="home.php"
                 class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Home</a>
         </li>
-        <li><a href="login.html"
-                class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Login</a></li>
+        <li><a href="signup.php" class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Sign
+                Up</a></li>
     </ul>
 
     <!-- Sign Up Form -->
@@ -48,43 +48,29 @@
             <div class="row">
                 <form class="col offset-s1 s10 m12">
                     <div class="row">
-                        <div class="col s12 center-align margin-up">
+                        <div class="col s12 center-align margin-down">
                             <img src="images/smileymark.png" class="form-logo" alt="">
                         </div>
 
                         <div class="col s12 center-align margin-down1">
-                            <h6>Please fill in this form to create an account.</h6>
+                            <h6>Enter your details to login.</h6>
                         </div>
 
-                        <div class="input-field col s12 offset-m2 m8 xl5">
-                            <i class="material-icons prefix darkBlue-text">account_circle</i>
-                            <input id="full_name" type="text" class="validate">
-                            <label for="full_name">Full Name</label>
-                        </div>
-
-                        <div class="input-field col s12 offset-m2 m8 xl6 offset-xl1">
+                        <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
                             <i class="material-icons prefix darkBlue-text">email</i>
                             <input id="email" type="email" class="validate">
                             <label for="email">Email</label>
-                            <span class="helper-text" data-error="wrong" data-success="right">example@gmail.com</span>
-                        </div>
-                        
-                        <div class="input-field col s12 offset-m2 m8 xl5">
-                            <i class="material-icons prefix darkBlue-text">phone</i>
-                            <input id="tel" type="tel" class="validate">
-                            <label for="tel">Phone</label>
                         </div>
 
-                        <div class="input-field col s12 offset-m2 m8 xl6 offset-xl1">
+                        <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
                             <i class="material-icons prefix darkBlue-text">lock</i>
                             <input id="password" type="password" class="validate">
                             <label for="password">Password</label>
                         </div>
 
                         <div class="col s12 center-align margin-up">
-                            <a href="login.html"
-                                class="waves-effect btn-large transparent darkBlue-text bold rounded">Create
-                                Account</a>
+                            <a href="chat.php"
+                                class="waves-effect btn-large transparent darkBlue-text bold rounded">Login</a>
                         </div>
 
                     </div>

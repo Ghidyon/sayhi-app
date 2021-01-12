@@ -38,7 +38,7 @@
     <div class="form-container">
         <div class="container">
             <div class="row">
-                <form class="col offset-s1 s10 m12" action="<?= ROOT ?>actions/register" method="POST">
+                <form class="col offset-s1 s10 m12" action="<?= ROOT ?>actions/register.php" method="POST">
                     <div class="row">
                         <div class="col s12 center-align margin-up">
                             <img src="<?= ROOT ?>images/smileymark.png" class="form-logo" alt="">

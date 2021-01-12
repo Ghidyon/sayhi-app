@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" sizes="32x32" href="images/favicon.jpg">
+    <link rel="icon" type="image/jpg" sizes="32x32" href="<?= ROOT ?>images/favicon.jpg">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= ROOT ?>css/materialize.min.css">
+    <link rel="stylesheet" href="<?= ROOT ?>css/style.css">
     <title>SayHi - Create Account</title>
 </head>
 
@@ -49,7 +49,7 @@
                 <form class="col offset-s1 s10 m12">
                     <div class="row">
                         <div class="col s12 center-align margin-up">
-                            <img src="images/smileymark.png" class="form-logo" alt="">
+                            <img src="<?ROOT?>images/smileymark.png" class="form-logo" alt="">
                         </div>
 
                         <div class="col s12 center-align margin-down1">
@@ -97,9 +97,10 @@
 
 
     <!-- Scripts -->
-    <script src="js/jquery-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="<?ROOT?>js/jquery-min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script src="<?=ROOT?>js/materialize.min.js"></script>
+    <script src="<?=ROOT?>js/main.js"></script>
 
 </body>
 

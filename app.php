@@ -6,13 +6,14 @@
     define('DS', DIRECTORY_SEPARATOR); // for a default seperator in the user environment
     
     // Database Connection
-    define('ROOT', ''); // changeS to '/' when online
     define('HOST', '127.0.0.1');
     define('DBNAME', '');
     define('USERNAME', '');
     define('PASSWORD', '');
     // define('ROOT', '');
-
+    
+    // folder handle
     define('SITE_NAME', 'SayHi');
-
+    define('ROOT', '/hiapp/'); // change to '/' when online
+    
 ?>

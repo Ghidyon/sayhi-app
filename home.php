@@ -1,46 +1,14 @@
-<?php require_once(APP_ROOT.DS.'app.php'); ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" sizes="32x32" href="images/favicon.jpg">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title><?= SITE_NAME; ?> - Home</title>
-</head>
+<?php
+    require_once('app.php');
+    require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
+?>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="darkBlue">
-        <div class="container">
-            <div class="nav-wrapper">
-                <img class="brand-logo logo" src="images/sayhi-logo.png" alt="Logo">
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="signup.php"
-                            class="waves-effect waves-light btn lightBlue darkBlue-text rounded bold lr-padding">Sign
-                            Up</a>
-                    </li>
-                    <li><a href="login.php"
-                            class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="signup.php" class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Sign
-                Up</a>
-        </li>
-        <li><a href="login.php"
-                class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Login</a></li>
-    </ul>
+    <?php 
+        require_once(APP_ROOT . DS . 'includes' . DS . 'nav.php');
+    ?>
 
     <!-- Content Section -->
 
@@ -130,9 +98,9 @@
 
 
     <!-- Scripts -->
-    <script src="js/jquery-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="<?= ROOT ?>js/jquery-min.js"></script>
+    <script src="<?= ROOT ?>js/materialize.min.js"></script>
+    <script src="<?= ROOT ?>js/main.js"></script>
 </body>
 
 </html>

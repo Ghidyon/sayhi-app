@@ -10,20 +10,26 @@ if (isset($_POST['register'])) {
 
     $user_data = ['name' => $name, 'email' => $email, 'phone' => $phone, 'password' => $password, 'confirm_password' => $c_password];
 
-    $error = empty_field($user_data);
+    $empty_field_error = empty_field($user_data);
 
-    if(!empty($error)) {
-        $_SESSION['message'] = $error; // sets error message into the $_SESSION array
+    if(!empty($empty_field_error)) {
+        $_SESSION['message'] = $empty_field_error; // sets error message into the $_SESSION array
         redirect('signup');
     }
 
-    if($user_data['password'] !== $user_data['confirm_password']) {
-        $error = 'Passwords do not match!';
-        $_SESSION['message'] = $error;
+    $password_strength_error = password_strength($user_data['password']);
+
+    if(!empty($password_strength_error)) {
+        $_SESSION['message'] = $password_strength_error;
         redirect('signup');
     }
+    
+    $password_match_error = password_match($user_data['password'], $user_data['confirm_password']);
 
-    password_match()
+    if(!empty($password_match_error)) {
+        $_SESSION['message'] = $password_match_error;
+        redirect('signup');
+    }
 
 } else {
     // take the user back to the home page

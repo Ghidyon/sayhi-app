@@ -73,7 +73,7 @@
                             <label for="password">Password</label>
                         </div>
 
-                        <div class="input-field col s12 offset-m2 m8 xl6 offset-xl3">
+                        <div class="input-field col s12 offset-m2 m8 xl5">
                             <i class="material-icons prefix darkBlue-text">lock</i>
                             <input id="c_password" type="password" name="c_password" class="validate">
                             <label for="c_password">Confirm Password</label>

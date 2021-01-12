@@ -13,7 +13,6 @@ if (isset($_POST['register'])) {
     $error = empty_field($user_data);
 
     if(!empty($error)) {
-        // echo $error;
         $_SESSION['message'] = $error; // set error message into the $_SESSION array
         redirect('signup');
     }

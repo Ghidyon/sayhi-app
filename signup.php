@@ -77,29 +77,23 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
     <?php
     require_once(APP_ROOT . DS . 'includes' . DS . 'scripts.php');
     ?>
+    
     <!-- To display error -->
-    <?php 
-    /* if(isset($_SESSION['message'])) {
+    <?php
+    if (isset($_SESSION['message'])) {
         echo "<script>
         M.toast({
-                html: ". $_SESSION['message'] .",
-                classes: 'rounded',
-                displayLength: 2000
-            });
-            </script>";
+            html: " . "'" . $_SESSION['message'] . "'" . ",
+            classes: 'rounded',
+            displayLength: 2000
+        });
+    </script>";
         $_SESSION['message'] = '';
 
         // echo $_SESSION['message'];
         // $_SESSION['message'] = '';
-    } */
+    }
     ?>
-    <script>
-        M.toast({
-                html:  <?php echo $_SESSION['message'];?>,
-                classes: 'rounded',
-                displayLength: 2000
-            });
-            </script>"
 </body>
 
 </html>

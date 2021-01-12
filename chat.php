@@ -17,7 +17,7 @@
         <div class="fixed-header">
             <div class="header darkBlue">
                 <div class="chat-header">
-                    <a href="index.html"><i class="material-icons white-text size-2">keyboard_arrow_left</i></a>
+                    <a href="home.php"><i class="material-icons white-text size-2">keyboard_arrow_left</i></a>
                     <a href="profile.html">
                         <i class="material-icons white-text size-3">account_circle</i>
                     </a>

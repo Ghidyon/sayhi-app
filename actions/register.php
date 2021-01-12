@@ -13,13 +13,19 @@ if (isset($_POST['register'])) {
     $error = empty_field($user_data);
 
     if(!empty($error)) {
-        echo $error;
-        $_SESSION['msg'] = $error;
+        // echo $error;
+        $_SESSION['message'] = $error; // set error message into the $_SESSION array
+        redirect('signup');
+    }
+
+    if($user_data['password'] !== $user_data['confirm_password']) {
+        $error = 'Passwords do not match!';
+        $_SESSION['message'] = $error;
         redirect('signup');
     }
 
 } else {
-    // take the user back to the sign up page
+    // take the user back to the home page
     // header('location:'.ROOT.'signup');  used to keep people off some files
     redirect('home');
 }

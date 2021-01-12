@@ -1,37 +1,20 @@
 <?php
-    // require_once('app.php');
-    require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
-
+// dump_and_die($_SERVER);
+require_once('app.php');
+require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 ?>
+
 <body>
 
-
     <!-- Navbar -->
-    <nav class="darkBlue">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="home.php" class="brand-logo">
-                    <img class="logo" src="images/sayhi-logo.png" alt="Logo">
-                </a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="home"
-                            class="waves-effect waves-light btn lightBlue darkBlue-text rounded bold lr-padding">Home</a>
-                    </li>
-                    <li><a href="login"
-                            class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php
+    require_once(APP_ROOT . DS . 'includes' . DS . 'nav.php');
+    ?>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="home"
-                class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Home</a>
+        <li><a href="home" class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Home</a>
         </li>
-        <li><a href="login"
-                class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Login</a></li>
+        <li><a href="login" class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Login</a></li>
     </ul>
 
     <!-- Sign Up Form -->
@@ -60,7 +43,7 @@
                             <label for="email">Email</label>
                             <span class="helper-text" data-error="wrong" data-success="right">example@gmail.com</span>
                         </div>
-                        
+
                         <div class="input-field col s12 offset-m2 m8 xl5">
                             <i class="material-icons prefix darkBlue-text">phone</i>
                             <input id="tel" type="tel" name="phone" class="validate">
@@ -80,8 +63,7 @@
                         </div>
 
                         <div class="col s12 center-align margin-up">
-                            <button type="submit" name="register"
-                                class="waves-effect btn-large transparent darkBlue-text bold rounded">Create
+                            <button type="submit" name="register" class="waves-effect btn-large transparent darkBlue-text bold rounded">Create
                                 Account</button>
                         </div>
 
@@ -91,15 +73,33 @@
         </div>
     </div>
 
-
-
-
     <!-- Scripts -->
-    <script src="<?ROOT?>js/jquery-min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
-    <script src="<?=ROOT?>js/materialize.min.js"></script>
-    <script src="<?=ROOT?>js/main.js"></script>
+    <?php
+    require_once(APP_ROOT . DS . 'includes' . DS . 'scripts.php');
+    ?>
+    <!-- To display error -->
+    <?php 
+    /* if(isset($_SESSION['message'])) {
+        echo "<script>
+        M.toast({
+                html: ". $_SESSION['message'] .",
+                classes: 'rounded',
+                displayLength: 2000
+            });
+            </script>";
+        $_SESSION['message'] = '';
 
+        // echo $_SESSION['message'];
+        // $_SESSION['message'] = '';
+    } */
+    ?>
+    <script>
+        M.toast({
+                html:  <?php echo $_SESSION['message'];?>,
+                classes: 'rounded',
+                displayLength: 2000
+            });
+            </script>"
 </body>
 
 </html>

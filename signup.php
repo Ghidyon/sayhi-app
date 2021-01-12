@@ -1,6 +1,5 @@
 <?php
 // dump_and_die($_SERVER);
-require_once('app.php');
 require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 ?>
 
@@ -77,18 +76,19 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
     <?php
     require_once(APP_ROOT . DS . 'includes' . DS . 'scripts.php');
     ?>
-    
+
     <!-- To display error -->
     <?php
     if (isset($_SESSION['message'])) {
-        echo "<script>
-        M.toast({
-            html: " . "'" . $_SESSION['message'] . "'" . ",
-            classes: 'rounded',
-            displayLength: 2000
-        });
-    </script>";
-        $_SESSION['message'] = '';
+        $toast =    "<script>
+                        M.toast({
+                            html: " . "'" . $_SESSION['message'] . "'" . ",
+                            classes: 'rounded red',
+                            displayLength: 2000
+                        });
+                    </script>";
+        echo $toast;
+        $_SESSION['message'] = null;
 
         // echo $_SESSION['message'];
         // $_SESSION['message'] = '';

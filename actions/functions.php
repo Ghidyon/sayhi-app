@@ -29,4 +29,11 @@ function empty_field($data) {
         return $error;
     }
 }
+
+function password_match($password_field, $confirm_password_field) {
+    if ($password_field !== $confirm_password_field) {
+        $error = 'Passwords do not match!';
+        return $error;
+    }
+}
 ?>

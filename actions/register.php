@@ -11,6 +11,9 @@ if (isset($_POST['register'])) {
 
     $user_data = ['name' => $name, 'email' => $email, 'phone' => $phone, 'password' => $password, 'confirm_password' => $c_password];
 
+    // Make a session of values inside input fields
+    $_SESSION['data'] = $user_data;
+
     $empty_field_error = empty_field($user_data);
 
     // Check empty field and throw error message

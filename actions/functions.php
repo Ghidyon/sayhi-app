@@ -52,8 +52,7 @@ function password_strength($password) {
     }
 }
 
-
-
+// Toast error message with color and time duration
 function toast($message, $color, $duration) {
     $toast =    "<script>
                     M.toast({
@@ -65,6 +64,7 @@ function toast($message, $color, $duration) {
     echo $toast;
 }
 
+// Check and return error when phone number is less than 8 and more than 15 characters 
 function check_phone($tel) {
     if(!(strlen(intval($tel)) > 7 && strlen(intval($tel)) < 16)) {
         $error = 'Enter a valid phone number!';
@@ -72,6 +72,7 @@ function check_phone($tel) {
     }
 }
 
+// Check and return error if an email is invalid 
 function validate_email($email) {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {// for validating the email to check if it has the ".com"
         $error = 'Enter a valid email!';
@@ -79,6 +80,7 @@ function validate_email($email) {
     }
 }
 
+// Check if two passwords are the same and return the hashed password
 function hash_password($password_field, $confirm_password_field) {
     if ($password_field === $confirm_password_field) {
         $password = password_hash($password_field, PASSWORD_DEFAULT);
@@ -86,8 +88,10 @@ function hash_password($password_field, $confirm_password_field) {
     }
 }
 
-/* function retain_value() {
-    if (isset($_SESSION['message']) {
-
+// Check if there is any input value, then retain value and display it as default henceforth 
+function retain_input_value($value) {
+    if (isset($_SESSION['data'])) {
+        $retained_value = $_SESSION['data'][$value];
+        return $retained_value;
     }
-} */
+}

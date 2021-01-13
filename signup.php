@@ -20,6 +20,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
         <div class="container">
             <div class="row">
                 <form class="col offset-s1 s10 m12" action="<?= ROOT ?>actions/register.php" method="POST">
+                
                     <div class="row">
                         <div class="col s12 center-align margin-up">
                             <img src="<?= ROOT ?>images/smileymark.png" class="form-logo" alt="">
@@ -31,20 +32,20 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
                         <div class="input-field col s12 offset-m2 m8 xl5">
                             <i class="material-icons prefix darkBlue-text">account_circle</i>
-                            <input id="full_name" type="text" name="name" class="validate">
+                            <input id="full_name" type="text" name="name" value="<?=retain_input_value('name')?>" class="validate">
                             <label for="full_name">Full Name</label>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 xl6 offset-xl1">
                             <i class="material-icons prefix darkBlue-text">email</i>
-                            <input id="email" type="email" name="email" class="validate">
+                            <input id="email" type="email" name="email" value="<?=retain_input_value('email')?>" class="validate">
                             <label for="email">Email</label>
                             <span class="helper-text" data-error="Invalid ❌" data-success="Valid ✔">example@gmail.com</span>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 xl5">
                             <i class="material-icons prefix darkBlue-text">phone</i>
-                            <input id="tel" type="tel" name="phone" class="validate">
+                            <input id="tel" type="tel" name="phone" value="<?=retain_input_value('phone')?>" class="validate">
                             <label for="tel">Phone</label>
                         </div>
 
@@ -67,6 +68,10 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                         </div>
 
                     </div>
+                    <?php
+                        // Reset input value after user submitsinput_
+                        $_SESSION['data'] = null;
+                    ?>
                 </form>
             </div>
         </div>

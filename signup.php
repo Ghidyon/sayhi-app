@@ -1,5 +1,4 @@
 <?php
-// dump_and_die($_SERVER);
 require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 ?>
 
@@ -53,6 +52,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                             <i class="material-icons prefix darkBlue-text">lock</i>
                             <input id="password" type="password" name="password" class="validate">
                             <label for="password">Password</label>
+                            <span class="helper-text">Minimum of 8 characters long</span>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 xl5">
@@ -77,7 +77,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
     require_once(APP_ROOT . DS . 'includes' . DS . 'scripts.php');
     ?>
 
-    <!-- To display error -->
+    <!-- To display error on validation -->
     <?php
     if (isset($_SESSION['message'])) {
         $toast =    "<script>

@@ -11,6 +11,7 @@ function dump_and_die($element) {
 // Redirect to another page
 function redirect($location) {
     header('location:'.ROOT.$location); // used to move to the specified location page
+    die;
 }
 
 
@@ -40,8 +41,8 @@ function empty_field($data) {
 // Check and return error when two passwords do not match
 function password_match($password_field, $confirm_password_field) {
     if ($password_field !== $confirm_password_field) {
-        $error = 'Passwords do not match!';
-        return $error;
+        // return $error;
+        return false;
     }
 }
 

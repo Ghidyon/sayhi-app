@@ -43,4 +43,18 @@ function password_strength($password) {
         return $error;
     }
 }
-?>
+
+function toast($message, $color, $duration) {
+    $toast =    "<script>
+                    M.toast({
+                        html: " . "'" . $message . "'" . ",
+                        classes: 'rounded $color',
+                        displayLength: $duration
+                    });
+                </script>";
+    echo $toast;
+}
+
+/* function check_phone($tel) {
+    if($tel > )
+} */

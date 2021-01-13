@@ -4,9 +4,10 @@
 ?>
 
 <body>
-
+    
     <!-- Navbar -->
-    <?php 
+    <?php
+        echo intval('abcc');
         require_once(APP_ROOT . DS . 'includes' . DS . 'nav.php');
     ?>
 

@@ -80,18 +80,10 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
     <!-- To display error on validation -->
     <?php
     if (isset($_SESSION['message'])) {
-        $toast =    "<script>
-                        M.toast({
-                            html: " . "'" . $_SESSION['message'] . "'" . ",
-                            classes: 'rounded red',
-                            displayLength: 10000
-                        });
-                    </script>";
-        echo $toast;
+
+        toast($_SESSION['message'], 'red', '5000');
         $_SESSION['message'] = null;
 
-        // echo $_SESSION['message'];
-        // $_SESSION['message'] = '';
     }
     ?>
 </body>

@@ -55,6 +55,20 @@ function toast($message, $color, $duration) {
     echo $toast;
 }
 
-/* function check_phone($tel) {
-    if($tel > )
+function check_phone($tel) {
+    if(!(strlen(intval($tel)) > 7 && strlen(intval($tel)) < 16)) {
+        $error = 'Enter a valid phone number!';
+        return $error;
+    }
+}
+
+function validate_email($email) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {// for validating the email to check if it has the ".com"
+        $error = 'Enter a valid email!';
+        return $error;
+    }
+}
+/* 
+function retain_value() {
+
 } */

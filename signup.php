@@ -39,7 +39,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                             <i class="material-icons prefix darkBlue-text">email</i>
                             <input id="email" type="email" name="email" class="validate">
                             <label for="email">Email</label>
-                            <span class="helper-text" data-error="wrong" data-success="right">example@gmail.com</span>
+                            <span class="helper-text" data-error="Invalid ❌" data-success="Valid ✔">example@gmail.com</span>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 xl5">

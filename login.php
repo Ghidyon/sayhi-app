@@ -78,7 +78,14 @@
     <script src="js/jquery-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/main.js"></script>
+    <?php
+    if (isset($_SESSION['successful_message'])) {
 
+        toast($_SESSION['successful_message'], 'darkBlue', '5000');
+        $_SESSION['successful_message'] = null;
+
+    }
+    ?>
 </body>
 
 </html>

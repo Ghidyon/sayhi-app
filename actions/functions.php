@@ -41,8 +41,8 @@ function empty_field($data) {
 // Check and return error when two passwords do not match
 function password_match($password_field, $confirm_password_field) {
     if ($password_field !== $confirm_password_field) {
-        // return $error;
-        return false;
+        $error = 'Passwords do not match';
+        return $error;
     }
 }
 

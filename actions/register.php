@@ -55,23 +55,17 @@ if (isset($_POST['register'])) {
     }
 
     $password_hash = hash_password($user_data['password'], $user_data['confirm_password']);
-    
-    /* // Check if two passwords match and throw error message
-    if (!$password_match_error) {
-        $_SESSION['message'] = $password_match_error;
-        redirect('signup');
-    } */
-
-   /*  $sql = "INSERT INTO users (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password_hash')";
+ 
+    $sql = "INSERT INTO users (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password_hash')";
 
     if ( $conn->query($sql) ) {
         $conn->close(); // close connection
-        $_SESSION['message'] = toast('Successfully Registered!', 'darkBlue', 10000);
+        $_SESSION['successful_message'] = 'Successfully Registered!';
         redirect('login');
     } else {
-        $_SESSION['message'] = toast('Something went wrong 😢, Try again!', 'red', 10000);
+        $_SESSION['message'] = 'Something went wrong 😢, Try again!';
         redirect('signup');
-    } */
+    }
 
 } else {
     // take the user back to the home page

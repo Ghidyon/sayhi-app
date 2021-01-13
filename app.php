@@ -6,16 +6,17 @@
     define('DS', DIRECTORY_SEPARATOR); // for a default seperator in the user environment
     
     // Database Connection
-    define('HOST', '127.0.0.1');
-    define('DBNAME', '');
-    define('USERNAME', '');
+    define('HOST', '127.0.0.1'); // server_name
+    define('USERNAME', 'root');
     define('PASSWORD', '');
+    define('DBNAME', 'hiapp_user_data');
     // define('ROOT', '');
     
     // folder handle
     define('SITE_NAME', 'SayHi');
     define('ROOT', '/hiapp/'); // change to '/' when online
     
-    // getting scripts for actions
+    // getting scripts for 
+    require_once(APP_ROOT . DS . 'DBCON.php')
     require_once(APP_ROOT . DS . 'actions' . DS . 'functions.php');
 ?>

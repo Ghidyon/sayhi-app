@@ -62,6 +62,17 @@ if (isset($_POST['register'])) {
         redirect('signup');
     } */
 
+   /*  $sql = "INSERT INTO users (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password_hash')";
+
+    if ( $conn->query($sql) ) {
+        $conn->close(); // close connection
+        $_SESSION['message'] = toast('Successfully Registered!', 'darkBlue', 10000);
+        redirect('login');
+    } else {
+        $_SESSION['message'] = toast('Something went wrong 😢, Try again!', 'red', 10000);
+        redirect('signup');
+    } */
+
 } else {
     // take the user back to the home page
     // header('location:'.ROOT.'signup');  used to keep people off some files

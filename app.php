@@ -17,6 +17,6 @@
     define('ROOT', '/hiapp/'); // change to '/' when online
     
     // getting scripts for 
-    require_once(APP_ROOT . DS . 'DBCON.php')
+    require_once(APP_ROOT . DS . 'DBCON.php');
     require_once(APP_ROOT . DS . 'actions' . DS . 'functions.php');
 ?>

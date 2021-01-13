@@ -1,4 +1,5 @@
 <?php
+global $conn; // to be able to be accessed in any scope
 
 function dump_and_die($element) {
     echo "<pre>";

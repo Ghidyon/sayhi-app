@@ -7,15 +7,21 @@ function dump_and_die($element) {
     die;
 }
 
+// Redirect to another page
 function redirect($location) {
     header('location:'.ROOT.$location); // used to move to the specified location page
 }
 
+
+######## Form Validation and Processing ##########
+
+// Check input and remove unwanted spaces and filtering
 function sanitize($data) {
     $sanitize = filter_var(trim($data));
     return $sanitize;
 }
 
+// Check for empty fields
 function empty_field($data) {
     if(is_array($data)) {
         foreach ($data as $key => $value) {
@@ -30,6 +36,7 @@ function empty_field($data) {
     }
 }
 
+// Check and return error when two passwords do not match
 function password_match($password_field, $confirm_password_field) {
     if ($password_field !== $confirm_password_field) {
         $error = 'Passwords do not match!';
@@ -37,12 +44,15 @@ function password_match($password_field, $confirm_password_field) {
     }
 }
 
+// Check and return error when a password is less than 8 characters
 function password_strength($password) {
     if (strlen($password) > 1 && strlen($password) < 8) {
         $error = 'Password must be 8 characters long!';
         return $error;
     }
 }
+
+
 
 function toast($message, $color, $duration) {
     $toast =    "<script>
@@ -68,7 +78,16 @@ function validate_email($email) {
         return $error;
     }
 }
-/* 
-function retain_value() {
 
+function hash_password($password_field, $confirm_password_field) {
+    if ($password_field === $confirm_password_field) {
+        $password = password_hash($password_field, PASSWORD_DEFAULT);
+        return $password;
+    }
+}
+
+/* function retain_value() {
+    if (isset($_SESSION['message']) {
+
+    }
 } */

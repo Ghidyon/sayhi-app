@@ -51,6 +51,14 @@ if (isset($_POST['register'])) {
         redirect('signup');
     }
 
+    $password_hash = hash_password($user_data['password'], $user_data['confirm_password']);
+    
+    /* // Check if two passwords match and throw error message
+    if (!$password_match_error) {
+        $_SESSION['message'] = $password_match_error;
+        redirect('signup');
+    } */
+
 } else {
     // take the user back to the home page
     // header('location:'.ROOT.'signup');  used to keep people off some files

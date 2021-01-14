@@ -14,7 +14,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
     <div class="form-container">
         <div class="container">
             <div class="row">
-                <form action="sign_user_in.php" class="col offset-s1 s10 m12">
+                <form action="<?= ROOT ?>actions/sign_user_in.php" method="POST" class="col offset-s1 s10 m12">
                     <div class="row">
                         <div class="col s12 center-align margin-down">
                             <img src="images/smileymark.png" class="form-logo" alt="">
@@ -52,12 +52,19 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
     <!-- Scripts -->
     <?php
     require_once(APP_ROOT . DS . 'includes' . DS . 'scripts.php');
-    ?>
-    <?php
+
     if (isset($_SESSION['successful_message'])) {
 
         toast($_SESSION['successful_message'], 'darkBlue', '5000');
         $_SESSION['successful_message'] = null;
+    }
+    
+    // To display error on validation
+
+    if (isset($_SESSION['message'])) {
+
+        toast($_SESSION['message'], 'red', '5000');
+        $_SESSION['message'] = null;
     }
     ?>
 </body>

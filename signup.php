@@ -65,7 +65,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                     </div>
 
                     <?php
-                    // Reset input value after user submitsinput_
+                    // Reset input value after user submits input
                     $_SESSION['data'] = null;
                     ?>
                 </form>
@@ -84,6 +84,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
         toast($_SESSION['message'], 'red', '5000');
         $_SESSION['message'] = null;
+        
     }
     ?>
 </body>

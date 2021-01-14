@@ -1,38 +1,14 @@
 <?php
-    // require_once('app.php');
-    require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
+// require_once('app.php');
+require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 ?>
 
 <body>
 
-
     <!-- Navbar -->
-    <nav class="darkBlue">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="home.php" class="brand-logo">
-                    <img class="logo" src="images/sayhi-logo.png" alt="Logo">
-                </a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="home.php"
-                            class="waves-effect waves-light btn lightBlue darkBlue-text rounded bold lr-padding">Home</a>
-                    </li>
-                    <li><a href="signup.php"
-                            class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Sign Up</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="home.php"
-                class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Home</a>
-        </li>
-        <li><a href="signup.php" class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Sign
-                Up</a></li>
-    </ul>
+    <?php
+    require_once(APP_ROOT . DS . 'includes' . DS . 'nav.php');
+    ?>
 
     <!-- Sign Up Form -->
     <div class="form-container">
@@ -61,8 +37,7 @@
                         </div>
 
                         <div class="col s12 center-align margin-up">
-                            <a href="chat.php"
-                                class="waves-effect btn-large transparent darkBlue-text bold rounded">Login</a>
+                            <a href="chat.php" class="waves-effect btn-large transparent darkBlue-text bold rounded">Login</a>
                         </div>
 
                     </div>
@@ -75,15 +50,14 @@
 
 
     <!-- Scripts -->
-    <script src="js/jquery-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/main.js"></script>
+    <?php
+    require_once(APP_ROOT . DS . 'includes' . DS . 'scripts.php');
+    ?>
     <?php
     if (isset($_SESSION['successful_message'])) {
 
         toast($_SESSION['successful_message'], 'darkBlue', '5000');
         $_SESSION['successful_message'] = null;
-
     }
     ?>
 </body>

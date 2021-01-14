@@ -6,14 +6,8 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
     <!-- Navbar -->
     <?php
-    require_once(APP_ROOT . DS . 'includes' . DS . 'nav.php');
+        require_once(APP_ROOT . DS . 'includes' . DS . 'nav.php');
     ?>
-
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="home" class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Home</a>
-        </li>
-        <li><a href="login" class="waves-effect waves-light btn darkBlue-text white rounded bold lr-padding">Login</a></li>
-    </ul>
 
     <!-- Sign Up Form -->
     <div class="form-container">
@@ -30,7 +24,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                             <h6>Please fill in this form to create an account.</h6>
                         </div>
 
-                        <div class="input-field col s12 offset-m2 m8 xl5 l-margin">
+                        <div class="input-field col s12 offset-m2 m8 xl6">
                             <i class="material-icons prefix darkBlue-text">account_circle</i>
                             <input id="full_name" type="text" name="name" value="<?= retain_input_value('name') ?>" class="validate">
                             <label for="full_name">Full Name</label>
@@ -43,7 +37,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                         </div>
 
                         <div class="col s12">
-                            <div class="input-field col s12 offset-m2 m8 xl5">
+                            <div class="input-field col s12 offset-m2 m8 xl6">
                                 <i class="material-icons prefix darkBlue-text">email</i>
                                 <input id="email" type="email" name="email" value="<?= retain_input_value('email') ?>" class="validate">
                                 <label for="email">Email</label>
@@ -51,7 +45,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                             </div>
                         </div>
 
-                        <div class="input-field col s12 offset-m2 m8 xl5">
+                        <div class="input-field col s12 offset-m2 m8 xl6">
                             <i class="material-icons prefix darkBlue-text">lock</i>
                             <input id="password" type="password" name="password" class="validate">
                             <label for="password">Password</label>

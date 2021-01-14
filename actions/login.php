@@ -2,7 +2,6 @@
 
 require_once('../app.php');
 
-
 // When the form submit button is clicked, start validation
 if (isset($_POST['login'])) {
     $user_id = sanitize($_POST['email_or_phone']);

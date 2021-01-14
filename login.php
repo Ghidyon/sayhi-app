@@ -1,5 +1,4 @@
 <?php
-// require_once('app.php');
 require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 ?>
 

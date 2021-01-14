@@ -116,3 +116,18 @@ function validate_account($table_name, $user_array, $database) {
     }
     return false;
 }
+
+function get_user_details($table_name, $user_array, $database) {
+    // for every item in the user array, check for error
+    foreach ( $user_array as $table_field => $user_input) {
+        // extract every input match
+        $sql = "SELECT * FROM users $table_name WHERE $table_field = '$user_input'";
+        // result gotten from the database;
+        $result = $database->query($sql);
+        
+        // Once selected value from database is one or more, return result
+        if ($result->num_rows > 0) {
+            return $result;
+        }
+    }
+}

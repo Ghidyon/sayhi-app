@@ -14,7 +14,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
     <div class="form-container">
         <div class="container">
             <div class="row">
-                <form action="<?= ROOT ?>actions/sign_user_in.php" method="POST" class="col offset-s1 s10 m12">
+                <form action="<?= ROOT ?>actions/login.php" method="POST" class="col offset-s1 s10 m12">
                     <div class="row">
                         <div class="col s12 center-align margin-down">
                             <img src="images/smileymark.png" class="form-logo" alt="">
@@ -26,8 +26,8 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
                         <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
                             <i class="material-icons prefix darkBlue-text">email</i>
-                            <input name="email" id="email" type="email" class="validate" value="<?= retain_input_value($_SESSION['login data'], "email") ?>">
-                            <label for="email">Email</label>
+                            <input name="email_or_phone" id="id" type="text" class="validate" value="<?= retain_input_value($_SESSION['login data'], 'Email or Phone number') ?>">
+                            <label for="id">Email or Phone number</label>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
@@ -37,10 +37,13 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                         </div>
 
                         <div class="col s12 center-align margin-up">
-                            <button name="sign_user_in" type="submit" class="waves-effect btn-large transparent darkBlue-text bold rounded">Login</button>
+                            <button name="login" type="submit" class="waves-effect btn-large transparent darkBlue-text bold rounded">Login</button>
                         </div>
-
                     </div>
+                    <?php
+                    // Reset input value after user submits input
+                    $_SESSION['login data'] = null;
+                    ?>
                 </form>
             </div>
         </div>
@@ -57,14 +60,16 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
         toast($_SESSION['successful_message'], 'darkBlue', '5000');
         $_SESSION['successful_message'] = null;
+
     }
     
     // To display error on validation
 
     if (isset($_SESSION['message'])) {
 
-        toast($_SESSION['message'], 'red', '5000');
+        toast($_SESSION['message'], 'red', '8000');
         $_SESSION['message'] = null;
+
     }
     ?>
 </body>

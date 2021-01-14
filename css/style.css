@@ -394,6 +394,10 @@ h5 {
     font-weight: 500 !important;
 }
 
+.strong {
+    font-weight: 500 !important;
+}
+
 .thin {
     font-family: "Roboto" !important;
     font-weight: 300 !important;

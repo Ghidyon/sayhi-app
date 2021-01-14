@@ -14,7 +14,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
     <div class="form-container">
         <div class="container">
             <div class="row">
-                <form class="col offset-s1 s10 m12">
+                <form action="sign_user_in.php" class="col offset-s1 s10 m12">
                     <div class="row">
                         <div class="col s12 center-align margin-down">
                             <img src="images/smileymark.png" class="form-logo" alt="">
@@ -26,18 +26,18 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
                         <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
                             <i class="material-icons prefix darkBlue-text">email</i>
-                            <input id="email" type="email" class="validate">
+                            <input name="email" id="email" type="email" class="validate">
                             <label for="email">Email</label>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
                             <i class="material-icons prefix darkBlue-text">lock</i>
-                            <input id="password" type="password" class="validate">
+                            <input name="password" id="password" type="password" class="validate">
                             <label for="password">Password</label>
                         </div>
 
                         <div class="col s12 center-align margin-up">
-                            <a href="chat.php" class="waves-effect btn-large transparent darkBlue-text bold rounded">Login</a>
+                            <button name="sign_user_in" type="submit" class="waves-effect btn-large transparent darkBlue-text bold rounded">Login</button>
                         </div>
 
                     </div>

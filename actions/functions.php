@@ -41,7 +41,7 @@ function empty_field($data) {
 // Check and return error when two passwords do not match
 function password_match($password_field, $confirm_password_field) {
     if ($password_field !== $confirm_password_field) {
-        $error = '⚠ Passwords do not match!';
+        $error = '🙄 Passwords do not match!';
         return $error;
     }
 }
@@ -110,7 +110,7 @@ function validate_account($table_name, $user_array, $database) {
         // Once selected value from database is one or more, throw error message
         if ($result->num_rows > 0) {
             $database->close(); // close opened connection
-            $error = '⚠ ' . ucfirst($table_field) . ' already exists!';
+            $error = '🙄 ' . ucfirst($table_field) . ' already exists!';
             return $error;
         }
     }
@@ -130,4 +130,11 @@ function get_user_details($table_name, $user_array, $database) {
             return $result;
         }
     }
+}
+
+function pass_match($login_password, $hashed_password) {
+    if ( password_verify($login_password, $hashed_password) ) { // returns true if match is correct
+        return true;
+    }
+    return false;
 }

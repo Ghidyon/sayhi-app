@@ -9,10 +9,10 @@ if (isset($_POST['register'])) {
     $password = sanitize($_POST["password"]);
     $c_password = sanitize($_POST["c_password"]);
 
-    $user_data = ['name' => $name, 'email' => $email, 'phone' => $phone, 'password' => $password, 'confirm_password' => $c_password];
+    $user_data = ['name' => $name, 'phone' => $phone, 'email' => $email, 'password' => $password, 'confirm_password' => $c_password];
 
     // Make a session of values inside input fields
-    $_SESSION['data'] = $user_data;
+    $_SESSION['register data'] = $user_data;
 
     $empty_field_error = empty_field($user_data);
 
@@ -56,6 +56,17 @@ if (isset($_POST['register'])) {
 
     $password_hash = hash_password($user_data['password'], $user_data['confirm_password']);
  
+    $check_user_data = ['name' => $name, 'phone' => $phone, 'email' => $email];
+
+    $user_exist = validate_account('users', $check_user_data, $conn);
+
+    // Check if user data exists already on the database and throw error    
+    if ($user_exist) {
+        $_SESSION['message'] = $user_exist;
+        redirect('signup');
+    }
+
+    // 
     $sql = "INSERT INTO users (name, phone, email, password) VALUES ('$name', '$phone', '$email', '$password_hash')";
 
     if ( $conn->query($sql) ) {

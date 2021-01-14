@@ -26,13 +26,13 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
                         <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
                             <i class="material-icons prefix darkBlue-text">email</i>
-                            <input name="email" id="email" type="email" class="validate">
+                            <input name="email" id="email" type="email" class="validate" value="<?= retain_input_value($_SESSION['login data'], "email") ?>">
                             <label for="email">Email</label>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
                             <i class="material-icons prefix darkBlue-text">lock</i>
-                            <input name="password" id="password" type="password" class="validate">
+                            <input name="password" id="password" type="password" class="validate" value="<?= retain_input_value($_SESSION['login data'], "password") ?>">
                             <label for="password">Password</label>
                         </div>
 

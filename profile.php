@@ -39,7 +39,7 @@ if (isset($_SESSION['user'])) {
                 <li class="collection-item body-color avatar">
                     <img class="circle" src="images/user.svg">
                     <p>Name</p>
-                    <span class="title bold">Ghidyon</span>
+                    <span class="title bold"><?= $name; ?></span>
                     <a href="#!" class="secondary-content"><i class="material-icons grey-text text-lighten-1">edit</i></a>
                 </li>
 
@@ -57,7 +57,7 @@ if (isset($_SESSION['user'])) {
                 <li class="collection-item body-color avatar">
                     <img class="circle" src="images/phone.svg">
                     <p>Phone</p>
-                    <span class="title bold">08160451288</span>
+                    <span class="title bold"><?= $phone; ?></span>
                     <a href="#!" class="secondary-content"><i class="material-icons grey-text text-lighten-1">edit</i></a>
                 </li>
             </ul>

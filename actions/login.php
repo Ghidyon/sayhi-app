@@ -27,7 +27,6 @@ if (isset($_POST['login'])) {
     if ($result->num_rows > 0) {
         // Fetch results from database and display in an array
         $fetched_user_data = $result->fetch_assoc();
-        dump_and_die($fetched_user_data);
 
         // Extract every item in the array to stand individually as a declared variable
         // Extract to get hashed password in the database as a variable

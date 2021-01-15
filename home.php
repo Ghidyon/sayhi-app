@@ -7,7 +7,6 @@
     
     <!-- Navbar -->
     <?php
-        // echo intval('+345reee444');
         require_once(APP_ROOT . DS . 'includes' . DS . 'nav.php');
     ?>
 

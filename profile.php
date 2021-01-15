@@ -5,8 +5,8 @@ require_once('app.php');
 if (isset($_SESSION['user'])) {
     extract($_SESSION['user']); // extract user session
 
-
-    require_once(ROOT . DS . 'includes' . DS . 'header.php');
+    // HTML header tags
+    require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 ?>
 
     <body>
@@ -18,6 +18,9 @@ if (isset($_SESSION['user'])) {
                         <i class="material-icons white-text size-2">keyboard_arrow_left</i>
                     </a>
                     <span class="white-text size-1">Profile</span>
+                </div>
+                <div class="right-align">
+                    <a href="actions/logout" class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Logout</a>
                 </div>
             </div>
 
@@ -56,7 +59,7 @@ if (isset($_SESSION['user'])) {
     </body>
 
 
-    </html>
+</html>
 
 <?php
 } else {

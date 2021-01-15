@@ -26,20 +26,20 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
                         <div class="input-field col s12 offset-m2 m8 xl6">
                             <i class="material-icons prefix darkBlue-text">account_circle</i>
-                            <input id="full_name" type="text" name="name" value="<?= retain_input_value($_SESSION['register data'], 'name') ?>" class="validate">
+                            <input id="full_name" type="text" name="name" value="<?= retain_input_value($_SESSION['register data'], 'name'); ?>" class="validate">
                             <label for="full_name">Full Name</label>
                         </div>
 
                         <div class="input-field col s12 offset-m2 m8 xl5 offset-xl1">
                             <i class="material-icons prefix darkBlue-text">phone</i>
-                            <input id="tel" type="tel" name="phone" value="<?= retain_input_value($_SESSION['register data'], 'phone') ?>" class="validate">
+                            <input id="tel" type="tel" name="phone" value="<?= retain_input_value($_SESSION['register data'], 'phone'); ?>" class="validate">
                             <label for="tel">Phone</label>
                         </div>
 
                         <div class="col s12">
                             <div class="input-field col s12 offset-m2 m8 xl6">
                                 <i class="material-icons prefix darkBlue-text">email</i>
-                                <input id="email" type="email" name="email" value="<?= retain_input_value($_SESSION['register data'], 'email') ?>" class="validate">
+                                <input id="email" type="email" name="email" value="<?= retain_input_value($_SESSION['register data'], 'email'); ?>" class="validate">
                                 <label for="email">Email</label>
                                 <span class="helper-text" data-error="Invalid ❌" data-success="Valid ✔">example@gmail.com</span>
                             </div>
@@ -66,7 +66,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
                     <?php
                     // Reset input value after user submits input
-                    $_SESSION['register data'] = null;
+                    $_SESSION['register data'] = NULL;
                     ?>
                 </form>
             </div>

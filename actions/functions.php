@@ -90,7 +90,7 @@ function hash_password($password_field, $confirm_password_field) {
     }
 }
 
-// Check if there is any input value, then retain value and display it as default henceforth 
+// Check if there is any input value, then retain value and display it as default henceforth
 function retain_input_value($execute, $value) {
     if (isset($execute)) {
         $retained_value = $execute[$value];

@@ -27,7 +27,7 @@ if (isset($_SESSION['user'])) {
                     <span class="white-text size-1">Profile</span>
                 </div>
                 <div class="right-align">
-                    <a href="actions/logout" class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Logout</a>
+                    <a href="<?= ROOT ?>actions/logout.php" class="tiny-bottom-margin waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Logout</a>
                 </div>
             </div>
 

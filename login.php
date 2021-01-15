@@ -49,15 +49,14 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
     </div>
 
 
-
-
     <!-- Scripts -->
     <?php
     require_once(APP_ROOT . DS . 'includes' . DS . 'scripts.php');
 
+    // To display successful user registration message
     if (isset($_SESSION['successful_message'])) {
 
-        toast($_SESSION['successful_message'], 'darkBlue', '5000');
+        toast($_SESSION['successful_message'], 'darkBlue', '8000');
         $_SESSION['successful_message'] = null;
 
     }

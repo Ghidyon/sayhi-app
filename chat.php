@@ -23,7 +23,7 @@ if (isset($_SESSION['user'])) {
                 </div>
                 <div class="right-align">
                     <!-- <i class="material-icons white-text black-text">more_vert</i> -->
-                    <a href="actions/logout" class="waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Logout</a>
+                    <a href="actions/logout" class="tiny-bottom-margin waves-effect waves-light btn white darkBlue-text rounded bold lr-padding">Logout</a>
                 </div>
             </div>
             <div class="center-align status">

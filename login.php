@@ -36,7 +36,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                         </div>
 
                         <div class="col s12 center-align margin-up">
-                            <button name="login" type="submit" class="waves-effect btn-large transparent darkBlue-text bold rounded">Login</button>
+                            <button name="login" type="submit" class="waves-effect btn-large transparent darkBlue-text bold rounded btn-padding">Login</button>
                         </div>
                     </div>
                     <?php

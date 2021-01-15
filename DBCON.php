@@ -1,7 +1,7 @@
 <?php
 
 // Create connection
-
+//servername, username, password database_name
 $conn = new mysqli(HOST, USERNAME, PASSWORD, DBNAME);
 
 // Check connection 

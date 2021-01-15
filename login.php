@@ -1,5 +1,6 @@
 <?php
 require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
+echo APP_ROOT;
 // var_dump(isset($_SESSION['login data']));
 ?>
 

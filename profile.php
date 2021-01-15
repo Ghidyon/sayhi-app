@@ -1,9 +1,16 @@
 <?php
 require_once('app.php');
 
-// When login details is correct, extract user session
+// When login details is correct, extract user data from session for usage on page
 if (isset($_SESSION['user'])) {
     extract($_SESSION['user']); // extract user session
+
+    #### User Data we need:
+    /*  
+    *  $name
+    *  $phone
+    *  $email
+    */
 
     // HTML header tags
     require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');

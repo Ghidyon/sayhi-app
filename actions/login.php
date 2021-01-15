@@ -27,10 +27,13 @@ if (isset($_POST['login'])) {
     if ($result->num_rows > 0) {
         // Fetch results from database and display in an array
         $fetched_user_data = $result->fetch_assoc();
+        dump_and_die($fetched_user_data);
 
         // Extract every item in the array to stand individually as a declared variable
+        // Extract to get hashed password in the database as a variable
         extract($fetched_user_data); // makes each key of the array a variable and assigns the key's value to it
         
+        // Compare password entered by user and hashed password gotten from database
         if (pass_match($user_password, $password)) {
             $_SESSION['user'] = $fetched_user_data; // if passwords match, create a user session containing user details
             redirect('chat');

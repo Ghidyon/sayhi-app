@@ -31,7 +31,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
                         <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
                             <i class="material-icons prefix darkBlue-text">lock</i>
-                            <input name="password" id="password" type="password" class="validate" value="<?= retain_input_value($_SESSION['login data'], "password") ?>">
+                            <input name="password" id="password" type="password" class="validate">
                             <label for="password">Password</label>
                         </div>
 

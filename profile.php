@@ -44,13 +44,9 @@ if (isset($_SESSION['user'])) {
                 </li>
 
                 <li class="collection-item body-color avatar">
-                    <img class="circle" src="images/information-circle.svg">
-
-                    <p>Bio</p>
-                    <span class="title bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis officiis
-                        eos
-                        hic sapiente. Assumenda esse vitae corrupti ipsam enim eligendi maiores eaque suscipit, adipisci
-                        cumque deleniti est, ab accusamus doloribus!</span>
+                    <img class="circle" src="images/email.svg">
+                    <p>Email</p>
+                    <span class="title bold"><?= $email; ?></span>
                     <a href="#!" class="secondary-content"><i class="material-icons grey-text text-lighten-1">edit</i></a>
                 </li>
 

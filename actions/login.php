@@ -10,8 +10,8 @@ if (isset($_POST['login'])) {
     $login_data = ["Email or Phone number" => $user_id, "password" => $user_password];
 
     // Make a session of values inside input fields
-    $_SESSION['login data'] = $login_data; 
-    
+    // $_SESSION['login data'] = $login_data; 
+
     // Check empty field and throw error message
     $empty_field_error = empty_field($login_data);
     
@@ -35,6 +35,7 @@ if (isset($_POST['login'])) {
         // Compare password entered by user and hashed password gotten from database
         if (pass_match($user_password, $password)) {
             $_SESSION['user'] = $fetched_user_data; // if passwords match, create a user session containing user details
+            $_SESSION['login data'] = '';
             redirect('chat');
         } else {
             $_SESSION['message'] = "🙄 Incorrect password";

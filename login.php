@@ -25,7 +25,7 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
                         <div class="input-field col s12 offset-m2 m8 offset-xl3 xl6">
                             <i class="material-icons prefix darkBlue-text">email</i>
-                            <input name="email_or_phone" id="id" type="text" class="validate" value="<?= retain_input_value($_SESSION['login data'], 'Email or Phone number'); ?>">
+                            <input name="email_or_phone" id="id" type="text" class="validate">
                             <label for="id">Email or Phone number</label>
                         </div>
 
@@ -39,10 +39,6 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
                             <button name="login" type="submit" class="waves-effect btn-large transparent darkBlue-text bold rounded btn-padding">Login</button>
                         </div>
                     </div>
-                    <?php
-                    // Reset input value after user submits input
-                    $_SESSION['login data'] = NULL;
-                    ?>
                 </form>
             </div>
         </div>
@@ -58,18 +54,16 @@ require_once(APP_ROOT . DS . 'includes' . DS . 'header.php');
 
         toast($_SESSION['successful_message'], 'darkBlue', '8000');
         $_SESSION['successful_message'] = null;
-
     }
-    
-    // To display error on validation
 
+    // To display error on validation
     if (isset($_SESSION['message'])) {
 
         toast($_SESSION['message'], 'red', '8000');
         $_SESSION['message'] = null;
-
     }
     ?>
+    
 </body>
 
 </html>

@@ -72,6 +72,7 @@ if (isset($_POST['register'])) {
     if ( $conn->query($sql) ) {
         $conn->close(); // close connection
         $_SESSION['successful_message'] = 'Successfully Registered! 😊';
+        $_SESSION['login data'] = '';
         redirect('login');
     } else {
         $_SESSION['message'] = 'Something went wrong 😢, Try again!';

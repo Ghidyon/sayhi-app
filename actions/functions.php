@@ -91,12 +91,12 @@ function hash_password($password_field, $confirm_password_field) {
 }
 
 // Check if there is any input value, then retain value and display it as default henceforth
-function retain_input_value($execute, $value) {
+/* function retain_input_value($execute, $value) {
     if (isset($execute)) {
         $retained_value = $execute[$value];
         return $retained_value;
     }
-}
+} */
 
 function validate_account($table_name, $user_array, $database) {
     // for every item in the user array, check for error
